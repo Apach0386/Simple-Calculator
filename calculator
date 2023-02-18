@@ -1,0 +1,47 @@
+using System;
+
+namespace Calculator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double firstNumber, secondNumber, result;
+            string operation;
+
+            Console.Write("Enter the first number: ");
+            firstNumber = double.Parse(Console.ReadLine());
+
+            Console.Write("Enter the second number: ");
+            secondNumber = double.Parse(Console.ReadLine());
+
+            Console.Write("Enter the operation (+, -, *, /): ");
+            operation = Console.ReadLine();
+
+            switch (operation)
+            {
+                case "+":
+                    result = firstNumber + secondNumber;
+                    Console.WriteLine("Result: " + result);
+                    break;
+                case "-":
+                    result = firstNumber - secondNumber;
+                    Console.WriteLine("Result: " + result);
+                    break;
+                case "*":
+                    result = firstNumber * secondNumber;
+                    Console.WriteLine("Result: " + result);
+                    break;
+                case "/":
+                    result = firstNumber / secondNumber;
+                    Console.WriteLine("Result: " + result);
+                    break;
+                default:
+                    Console.WriteLine("Invalid operation");
+                    break;
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
